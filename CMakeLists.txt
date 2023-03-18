@@ -3,4 +3,6 @@ project(cmake_test1)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_library(clxxx SHARED TestPkg.cpp)
+include_directories(include)
+
+add_library(clxxx SHARED src/TestPkg.cpp)
