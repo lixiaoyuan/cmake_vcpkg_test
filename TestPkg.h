@@ -9,6 +9,8 @@ namespace lixy {
 
     class TestPkg {
 
+    public:
+        void print_user();
     };
 
 } // lixy
