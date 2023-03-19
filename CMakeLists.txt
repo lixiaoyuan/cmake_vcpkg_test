@@ -8,7 +8,9 @@ include_directories(include)
 add_library(clxxx SHARED src/TestPkg.cpp)
 
 install(TARGETS clxxx
-        DESTINATION lib
+        LIBRARY DESTINATION lib
+        RUNTIME DESTINATION bin
+        ARCHIVE DESTINATION bin
         )
 
 install(FILES include/TestPkg.h DESTINATION include)
