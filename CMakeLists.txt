@@ -5,13 +5,13 @@ set(CMAKE_CXX_STANDARD 20)
 
 include_directories(include)
 
-add_library(clxxx SHARED src/TestPkg.cpp)
+add_library(clxxx_s STATIC src/TestPkg.cpp)
 
-install(TARGETS clxxx
-        LIBRARY DESTINATION lib
-        RUNTIME DESTINATION bin
-        ARCHIVE DESTINATION bin
-        INCLUDES DESTINATION include
-        )
+# set(CMAKE_INSTALL_PREFIX "${CMAKE_CURRENT_SOURCE_DIR}/installed")
 
+install(TARGETS clxxx_s  DESTINATION lib)
+
+install(FILES include/TestPkg.h DESTINATION include)
+
+export(TARGETS clxxx_s FILE clxxxlib-config.cmake)
 #install(FILES include/TestPkg.h DESTINATION include)
