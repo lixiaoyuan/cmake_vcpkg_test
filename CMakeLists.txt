@@ -6,3 +6,9 @@ set(CMAKE_CXX_STANDARD 20)
 include_directories(include)
 
 add_library(clxxx SHARED src/TestPkg.cpp)
+
+install(TARGETS clxxx
+        DESTINATION lib
+        )
+
+install(FILES include/TestPkg.h DESTINATION include)
