@@ -13,5 +13,5 @@ install(TARGETS clxxx_s  DESTINATION lib)
 
 install(FILES include/TestPkg.h DESTINATION include)
 
-export(TARGETS clxxx_s FILE clxxxlib-config.cmake)
+export(TARGETS clxxx_s FILE clxxx_s-config.cmake)
 #install(FILES include/TestPkg.h DESTINATION include)
