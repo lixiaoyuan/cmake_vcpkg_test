@@ -11,6 +11,7 @@ install(TARGETS clxxx
         LIBRARY DESTINATION lib
         RUNTIME DESTINATION bin
         ARCHIVE DESTINATION bin
+        INCLUDES DESTINATION include
         )
 
-install(FILES include/TestPkg.h DESTINATION include)
+#install(FILES include/TestPkg.h DESTINATION include)
