@@ -7,11 +7,14 @@ set(CMAKE_CXX_STANDARD 20)
 
 include_directories(include)
 
-add_library(clxxx_s STATIC src/TestPkg.cpp)
+add_library(clib STATIC src/TestPkg.cpp)
 
-install(TARGETS clxxx_s EXPORT clxxx_s-targets  DESTINATION lib)
+install(TARGETS clib
+        EXPORT clib-targets
+        DESTINATION lib)
 
 install(FILES include/TestPkg.h DESTINATION include)
 
-install(EXPORT clxxx_s-targets FILE clxxx_s-config.cmake NAMESPACE mylib:: DESTINATION lib)
+install(EXPORT clib-targets FILE clib-config.cmake NAMESPACE mylib:: DESTINATION lib)
+
 #install(FILES include/TestPkg.h DESTINATION include)
