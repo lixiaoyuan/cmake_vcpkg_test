@@ -16,7 +16,7 @@ install(TARGETS clib
 install(FILES include/TestPkg.h DESTINATION include)
 
 #install(EXPORT clib-targets FILE clib-config.cmake NAMESPACE mylib:: DESTINATION lib)
-install(EXPORT clibTargets NAMESPACE mylib:: DESTINATION lib)
+install(EXPORT clibTargets FILE clibConfig.cmake NAMESPACE mylib:: DESTINATION lib)
 
 install (
         FILES
