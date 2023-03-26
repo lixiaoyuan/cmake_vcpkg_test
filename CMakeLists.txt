@@ -10,11 +10,17 @@ include_directories(include)
 add_library(clib STATIC src/TestPkg.cpp)
 
 install(TARGETS clib
-        EXPORT clib-targets
+        EXPORT clibTargets
         DESTINATION lib)
 
 install(FILES include/TestPkg.h DESTINATION include)
 
-install(EXPORT clib-targets FILE clib-config.cmake NAMESPACE mylib:: DESTINATION lib)
+#install(EXPORT clib-targets FILE clib-config.cmake NAMESPACE mylib:: DESTINATION lib)
+install(EXPORT clibTargets NAMESPACE mylib:: DESTINATION lib)
 
+install (
+        FILES
+        ${CMAKE_CURRENT_BINARY_DIR}/clibConfig.cmake
+        DESTINATION lib
+)
 #install(FILES include/TestPkg.h DESTINATION include)
