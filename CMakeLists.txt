@@ -20,7 +20,7 @@ install(EXPORT clibTargets FILE clibConfig.cmake NAMESPACE mylib:: DESTINATION l
 
 install (
         FILES
-        ${CMAKE_CURRENT_BINARY_DIR}/clibConfig.cmake
+        ${CURRENT_PACKAGES_DIR}/lib/clibConfig.cmake
         DESTINATION "${CURRENT_PACKAGES_DIR}/share/${PORT}"
 )
 
